@@ -1,0 +1,82 @@
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color: green;
+}
+
+body{
+    background-color:#e6ecf0;
+}
+
+main#content{
+    margin: 0 auto;
+    width: 50%;
+    background-color: #EAF8FD;
+    border-radius:2px;
+    padding: 10px;
+}
+
+textarea{
+    overflow: hidden;
+    width: 88%;
+    border-radius: 10px;
+    border: 1px solid #359df4;
+    padding:10px;
+    resize: none;
+}
+
+form{
+    text-align: right;
+}
+
+button{
+    background-color: #359df4;
+    border-radius: 10px;
+    border:none;
+    color:white;
+    padding:5px;
+    width:70px;
+}
+
+button:disabled{
+    background-color:#b9e1fa;
+    color:white;
+}
+
+#count{
+    position:relative;
+    top:2px;
+}
+
+ul#list{
+    list-style: none;
+}
+
+li.tweet-item{
+    background-color: white;
+    padding:1px 5px 5px 5px;
+    border-bottom:1px solid silver;
+}
+
+p.tweet-date{
+    font-size: 10px;
+    color:silver;
+    text-align: right;
+}
+
+p.tweet-content{
+    font-size: 20px;
+    color:#359df4;
+}
+
+img{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -30px;
+}
