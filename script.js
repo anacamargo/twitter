@@ -1,8 +1,17 @@
-document.getElementById('text-area').addEventListener('keyup', message);
+document.getElementById('text-area').addEventListener('keyup', validateTweet);
 document.getElementById('btn-tweet').addEventListener('click', tweet);
 document.getElementById('text-area').addEventListener('keydown', autoSize);
+document.getElementById('btn-login').addEventListener('click', login);
 
-function message() {
+
+function login(){
+    const name = document.getElementById('name-input').value;
+    document.getElementById('content-login').classList.remove('hidden');
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('name').innerHTML = name;
+}
+
+function validateTweet() {
     const str = document.getElementById('text-area').value;
     const max = 140;
     let currentLength = max - str.length;
@@ -14,7 +23,7 @@ function message() {
         document.getElementById('btn-tweet').setAttribute('disabled', 'disabled');
     }
 
-    let color = 'green';
+    let color = 'blue';
     if (currentLength <= 20) color = 'yellow';
     if (currentLength <= 10) color = 'red';
 
@@ -37,41 +46,25 @@ function getDateAsString() {
 }
 
 function tweet() {
-    const str = document.getElementById('text-area').value;
+    const textArea = document.getElementById('text-area');
     const dateTime = getDateAsString();
+    const list = document.getElementById('list');
+    const content = textArea.value.split('\n').join('<br/>');
+    const amount = document.getElementById('amount');
+    const count = document.getElementById('count');
+    const btn = document.getElementById('btn-tweet');
 
-    /*------------------------------------
-        Criando os elementos manualmente
-    --------------------------------------*/
-    // let node = document.createElement('li');
-    // let textNode = document.createTextNode(str);
-    // node.appendChild(textNode);
-    // let list = document.getElementById('list');
-    // list.insertBefore(node,list.firstChild);
-
-    /*---------------------------------------------------
-        Criando os elementos por função apartir do texto
-    -----------------------------------------------------*/
-
-    // const template = 
-    //     `<li class='tweet-item'>
-    //          <p class='tweet-content'>${str}</p>
-    //          <p class='tweet-date'>${dateTime}</p>
-    //      </li>`;
-    // let li = createLiFromText(template);
-    // let list = document.getElementById('list');
-    // list.insertBefore(li, list.firstChild);
-
-    /*------------------------------------
-        Alterando o texto interno da lista
-    --------------------------------------*/
     const template =
         `<li class='tweet-item'>
             <p class='tweet-date'>${dateTime}</p>
-            <p class='tweet-content'>${str}</p>
+            <p class='tweet-content'>${content}</p>
          </li>`;
-    document.getElementById('list').innerHTML = template + list.innerHTML;
-    document.getElementById('text-area').value = "";
+
+    list.innerHTML = template + list.innerHTML;
+    textArea.value = "";
+    count.innerHTML = "";
+    amount.innerText = list.children.length || 0;
+    btn.setAttribute('disabled', 'disabled');
 }
 
 function autoSize(){
@@ -79,21 +72,3 @@ function autoSize(){
     textarea.style.height = 'auto';
     textarea.style.height = textarea.scrollHeight + "px";
 }
-
-// function autosize() {
-//     let textarea = this;
-//     setTimeout(function () {
-//         textarea.style.cssText = 'height:auto; padding:0';
-//         textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
-//     }, 0);
-// }
-
-
-//https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro
-
-// function createLiFromText(htmlContent) {
-//     var ul = document.createElement('ul');
-//     ul.innerHTML = htmlContent.trim();
-//     return ul.firstChild;
-// }
-

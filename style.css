@@ -1,37 +1,63 @@
-.red{
-    color: red;
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI');
+    font-weight: 400;
+    font-style: normal;
 }
-.yellow{
-    color: yellow;
-}
-.green{
-    color: green;
+  
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI Semibold');
+    font-weight: 600;
+    font-style: normal;
 }
 
-body{
-    background-color:#e6ecf0;
-}
+body{background-color:#e6ecf0;}
+
+.red{color: #e0245e;}
+
+.yellow{color: #ffad1f;}
+
+.blue{color: #359df4;}
+
+.hidden{display: none;}
+
+.flex-box{display: flex;}
 
 main#content{
     margin: 0 auto;
-    width: 50%;
-    background-color: #EAF8FD;
+    width: 100%;
+    background-color: #e6ecf0;
     border-radius:2px;
+}
+
+#dashboard{justify-content: center;}
+
+form{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    background-color: #e8f5fd;
     padding: 10px;
 }
 
 textarea{
     overflow: hidden;
-    width: 88%;
+    width: 85%;
     border-radius: 10px;
-    border: 1px solid #359df4;
-    padding:10px;
+    border: 1px solid #c6e7fb;
+    padding:10px 30px 0 10px;
     resize: none;
+    font-size: 14px;
 }
 
-form{
-    text-align: right;
-}
+::-webkit-input-placeholder {color: #359df4;}
+  
+:-moz-placeholder {color: #359df4;}
+
+::-moz-placeholder {color: #359df4;}
+  
+:-ms-input-placeholder {color: #359df4;}
 
 button{
     background-color: #359df4;
@@ -49,17 +75,20 @@ button:disabled{
 
 #count{
     position:relative;
-    top:2px;
+    top:-24px;
+    left: 70px;
 }
 
 ul#list{
     list-style: none;
+    width: 59%;
 }
 
 li.tweet-item{
     background-color: white;
     padding:1px 5px 5px 5px;
     border-bottom:1px solid silver;
+    width: 100%;
 }
 
 p.tweet-date{
@@ -70,13 +99,98 @@ p.tweet-date{
 
 p.tweet-content{
     font-size: 20px;
-    color:#359df4;
+    color:#333;
+    padding-left: 20px;
+    font-size: 16px;
 }
 
-img{
+.photo{
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+}
+
+#photo-small{
+    width: 47px;
+    height: 47px;
     position: relative;
     top: -30px;
+}
+#photo-big{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 63px;
+    left: 10px;
+}
+
+aside{
+    width: 20%;
+    margin: 0 10px;
+}
+
+.profile-card{
+    background-color: #1DA1F2;
+    height:95px;
+}
+
+.profile-card-content{
+    background: #fff;
+    text-align: left;
+    flex-direction: column;
+}
+
+#name{
+    font-family: 'Segoe UI Semibold';
+    font-size: 18px;
+    align-self: center;
+    text-transform: capitalize;
+}
+.status{
+    padding: 20px 10px 10px;
+    font-family: 'Segoe UI Semibold';
+    color: gray;
+}
+
+#tweets{
+    justify-content:flex-end;
+    margin-right: 14%;
+}
+
+#amount{
+    color: white;
+    background-color: #359df4;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 0 15px 15px;
+}
+
+#home{
+    background-color: #359df4;
+    text-align: center;
+    padding: 14% 0;
+}
+
+#home>img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#home>input{
+    padding: 10px 50px;
+    text-align: center;
+}
+
+#btn-login{
+    background-color: white;
+    color: #359df4;
+    font-weight: bolder;
+    padding: 13px 10px;
+}
+
+#btn-login:hover{
+    background-color: #e6ecf0;
+    cursor: pointer;
 }

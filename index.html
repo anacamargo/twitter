@@ -10,14 +10,35 @@
 
 <body>
     <main id="content">
-        <form>
-            <img src="images/default_profile.png" alt="Default Profile" />
-            <textarea id="text-area" placeholder="What's happening?" rows="5"></textarea>
-            <span id="count"></span>
-            <button id="btn-tweet" type="button" value="tweet" disabled="disabled">Tweet</button>
-        </form>
-        <ul id="list">
-        </ul>
+        <section id="home">
+            <img src="images/logo.png" alt="logo" />
+            <input id="name-input" type="text" placeholder="Digite seu nome">
+            <button id="btn-login" type="button">Entrar</button>
+        </section>
+        <section id="content-login" class="hidden">
+            <section id="dashboard" class="flex-box">
+                <aside>
+                    <div class="profile-card">
+                        <img id="photo-big" class="photo" src="images/profile_1.png" alt="Default Profile" />
+                    </div>
+                    <div class="profile-card-content flex-box">
+                        <span id="name">Usuário</span>
+                        <span class="status">Tweets</span>
+                        <span id="amount">0</span>
+                    </div>
+                </aside>
+                <form>
+                    <img id="photo-small" class="photo" src="images/profile_1.png" alt="Default Profile" />
+                    <textarea id="text-area" placeholder="What's happening?" rows="5"></textarea>
+                    <span id="count"></span>
+                    <button id="btn-tweet" type="button" disabled="disabled">Tweet</button>
+                </form>
+            </section>
+            <section id="tweets" class="flex-box">
+                <ul id="list">
+                </ul>
+            </section>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
