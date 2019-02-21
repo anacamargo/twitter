@@ -14,5 +14,5 @@ O objetivo desse desafio é replicar o feed de notícias do Twitter, tendo os it
 * Adicionar a hora em que o tweet foi publicado.
 
 ## Processo de desenvolvimento
-Foi criado no arquivo HTML elementos para receber os dados digitados pelo usuário, e no arquivo JavaScript os dados foram captadose e validados para imprimir a mensagem na tela. Uma vez concluído, o HTML foi incrementado, assim como o CSS. Com o código  funcionando foi realizado uma refatoração para melhorar o funcionamento e entendimento do JavaScript.
+Foi criado no arquivo HTML elementos para receber os dados digitados pelo usuário, e no arquivo JavaScript os dados foram captados e validados para impressão da mensagem na tela. Uma vez concluído, o HTML foi incrementado, assim como o CSS. Com o código  funcionando foi realizado uma refatoração para melhorar o funcionamento e entendimento do JavaScript.
 
