@@ -6,7 +6,7 @@ document.getElementById('btn-login').addEventListener('click', login);
 let name = undefined;
 
 function login() {
-  img = pickRandomImage();
+  let img = pickRandomImage();
   name = document.getElementById('name-input').value;
   document.getElementById('content-login').classList.remove('hidden');
   document.getElementById('home').classList.add('hidden');
@@ -38,7 +38,7 @@ function validateTweet() {
 
 function getDateAsString() {
   let date = new Date();
-  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   let month = months[date.getMonth()];
   let day = date.getDate();
   let year = date.getFullYear();
@@ -59,16 +59,16 @@ function tweet() {
 
   const template =
     `<li class='tweet-item'>
-            <div class='tweet-title'>
-                <p class='tweet-content-title-name'>${name}</p>
-                <p class='tweet-content-title'>${dateTime}</p>
-            </div>
-            <p class='tweet-content'>${content}</p>
-         </li>`;
+      <div class='tweet-title'>
+        <p class='tweet-content-title-name'>${name}</p>
+        <p class='tweet-content-title'>${dateTime}</p>
+      </div>
+      <p class='tweet-content'>${content}</p>
+    </li>`;
 
   list.innerHTML = template + list.innerHTML;
-  textArea.value = "";
-  count.innerHTML = "";
+  textArea.value = '';
+  count.innerHTML = '';
   amount.innerText = list.children.length || 0;
   btn.setAttribute('disabled', 'disabled');
 }
@@ -76,7 +76,7 @@ function tweet() {
 function autoSize() {
   let textarea = document.getElementById('text-area');
   textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + "px";
+  textarea.style.height = textarea.scrollHeight + 'px';
 }
 
 function pickRandomImage() {

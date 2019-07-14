@@ -1,0 +1,19 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "Réplica do feed de notícias do Twitter.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacamargo/twitter.git"
+  },
+  "author": "Ana Cláudia Camargo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacamargo/twitter/issues"
+  },
+  "homepage": "https://github.com/anacamargo/twitter#readme"
+}
